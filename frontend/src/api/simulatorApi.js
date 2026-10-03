@@ -1,4 +1,4 @@
-const API_URL=import.meta.env.VITE_API_URL||"http://localhost:5000/api";
+const API_URL="https://netsimx-api.onrender.com/api";
 async function request(endpoint,options={}){
 const response=await fetch(`${API_URL}${endpoint}`,options);
 const data=await response.json().catch(()=>({}));
@@ -18,4 +18,4 @@ headers:{"Content-Type":"application/json"},
 body:JSON.stringify({type})
 });
 }
-export async function getSimulatorSnapshot(){return request("/snapshot");}
+export async function getSimulationStatus(){return request("/simulation-status");}
