@@ -7,7 +7,9 @@ const{execFile}=require("child_process");
 const app=express();
 const PORT=5000;
 const ROOT_PATH=path.resolve(__dirname,"..");
-const EXE_PATH=path.join(ROOT_PATH,"netsim.exe");
+const EXE_PATH=process.platform==="win32"
+?path.join(ROOT_PATH,"netsim.exe")
+:path.join(ROOT_PATH,"netsim");
 const SNAPSHOT_PATH=path.join(ROOT_PATH,"netsim_snapshot.json");
 let simulationRunning=false;
 

@@ -1,0 +1,10 @@
+.git
+.github
+.vscode
+frontend/node_modules
+frontend/dist
+api/node_modules
+*.exe
+*.log
+.env
+.env.local
