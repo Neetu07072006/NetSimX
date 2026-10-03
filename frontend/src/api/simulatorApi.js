@@ -18,4 +18,4 @@ headers:{"Content-Type":"application/json"},
 body:JSON.stringify({type})
 });
 }
-export async function getSimulationStatus(){return request("/simulation-status");}
+export async function getSimulatorSnapshot(){return request("/snapshot");}
